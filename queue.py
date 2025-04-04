@@ -13,6 +13,12 @@ class Queue:
         else:
             raise IndexError("dequeue from an empty queue")
 
+    def front(self):
+        if not self.is_empty():
+            return self.queue[0]
+        else:
+            raise IndexError("front from an empty queue")
+            
     def peek(self):
         if not self.is_empty():
             return self.queue[0]
